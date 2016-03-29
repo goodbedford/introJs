@@ -1,26 +1,3 @@
-##Goodbedford.com##
-###February 2016 Redesign###
-http://www.goodbedford.com/
+## Intro JS##
+### April 2016###
 
-**Portfolio and Blog showcasing present and past projects.**
-
-**Stack:** 
-- HTML5, 
-- CSS, 
-- Javascript, 
-- Angular, 
-- Bootstrap, 
-- Grunt, 
-- Sass, 
-- Karma, 
-- Jasmine, 
-- NPM, 
-- RWD, 
-- Emmet, 
-- Sketch, 
-- Webstorm
-
-**Role:** 
-- Conceptualization, 
-- Front-End Development 
-- Unit Testing 
