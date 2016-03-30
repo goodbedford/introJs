@@ -7,28 +7,242 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <title>Intro JS</title>
-    <link rel="shortcut icon" ng-href="src/assets/images/favicon.png"/>
+    <!--<link rel="shortcut icon" href="src/assets/images/favicon.png"/>-->
 
-    <link rel="stylesheet" ng-href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" ng-href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-    <link rel="stylesheet" ng-href="dist/css/styles.min.css"/>
-    <!-- remove # from url -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
     <body ng-cloak>
         <div class="container-fluid">
             <!-- title-bar -->
-            <div class="row">
-                <div class="title-bar">
-                    <h2>Intro JS</h2>
+            <div id="bm-js-intro" class="row">
+                <div  class="title-bar">
+                    <h2 class="text-center">Intro JS</h2>
                 </div>
             </div>
-            <!-- nav bar-->
+            <div class="row">
+                <!-- nav bar-->
+                <div class="col-xs-2">
+                    <div class="menu-panel">
+                        <h3 class="text-center">Table of Contents</h3>
+                        <ul>
+                            <li><a href="#bm-js-intro">Introduction</a></li>
+                            <li><a href="#bm-js-expectations">Expectations</a></li>
+                            <li><a href="#bm-js-history">Javascript History</a></li>
+                            <li><a href="#bm-js-basic">Javascript Getting Started</a></li>
+                            <li><a href="#bm-js-primitives">Primitive Values</a></li>
+                            <li><a href="">Arrays</a></li>
+                            <li><a href="">Objects</a></li>
+                            <li><a href="">Control Flow</a></li>
+                            <li><a href="">Loops & Interations</a></li>
+                            <li><a href="">Bootstrap</a></li>
+                            <li><a href="">DOM Events</a></li>
+                            <li><a href="">Jquery</a></li>
+                            <li><a href="">Resources</a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- main view -->
+                <div class="col-xs-10">
+                    <div  class="info-panel">
+                        <h3>Introduction</h3>
+                        <h2>Hi my name is Bedford and I <i class="fa fa-heart red"></i> Javascript.</h2>
+                        <p>Let's go around the room and state your name and what you hope to build.</p>
+                        <i class="fa fa-camera-retro fa-lg"></i> fa-lg
+                    </div>
+                    <div id="bm-js-expectations" class="info-panel">
+                        <h3>Expectations</h3>
+                        <p>Javascript is a really fun language with a few gotchas. Today we will take a bird's-eye view of the spec and occasionally swoop in for a deep dive.
+                            Some of the material may be difficult or easy depending on your programming background. If you never programmed in Javascript or want to be guided through getting started, this will be helpful.
+                            If your are using all the newest and baddest, Angular, React, Node then this class will be less of what your looking for.
+                        </p>
+                        <p>Learn Javascript History.</p>
+                        <p>Learn Javascript Fundamentals</p>
+                        <p>Learn DOM Events</p>
+                        <p>Learn Problem Solving & Best Practices</p>
+                        <p>Learn Connecting Scripts</p>
+                        <p>Learn Helpful Resources</p>
+                    </div>
+                    <div id="bm-js-history">
+                        <h3>Javascript History</h3>
+                        <div><img src="images/screenshots/js-history.png" alt="history timeline" class="img-responsive"></div>
+                        <br>
+                        <p>Javascript is a light-weight dynamically typed programming language. Javascript was invented in 1995 by Brendan Eich. It has since gone on to become one of the three pillars in web development. HTML, CSS and Javascript comprise the
+                        three pillars of the web. You can do almost anything with those three languages.</p>
+                        <p>Today we will be working in ES5 or ECMASCRIPT 5th edition. Javascript is now maintained by the TC39 working group and EcmaScript(European Computer Manufacturers Association) Governing Body.
+                            <a href="http://www.ecma-international.org/ecma-262/6.0/index.html">ES6 also known as ES2015</a> is the latest release but not fully
+                            <a href="http://caniuse.com/#search=ECMAScript">implemented amongst browsers</a>.</p>
+                        <ul>
+                            <li><a href="https://en.wikipedia.org/wiki/JavaScript">Javascript Wiki</a></li>
+                            <li><a href="https://brendaneich.com/">Brendan Eich.com</a></li>
+                            <li><a href="https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich">AUDIO: Origin of Javascript by Brendan Eich</a></li>
+                            <li><a href="http://caniuse.com/#search=ECMAScript">Can I Use ECMASCRIPT</a></li>
+                            <li><a href="http://kangax.github.io/compat-table/es6/">ES6 Compatibility Table</a></li>
+                            <li><a href="http://www.2ality.com/2011/06/ecmascript.html">ECMASCRIPT explanation</a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </div>
+                    <div id="bm-js-basic">
+                        <h3>Javascript Getting Started</h3>
+                        <h4>Tools of the Trade</h4>
+                        <p>We will use the Chrome Developer Tool or similar. Open your browser and then Javascript Console.
+                            <br>
+                            <br>Open Javascript Console.
+                            <br><strong>Short Cut: option + command + j</strong>
+                        </p>
+                        <p>Type <code>45 + 10;</code></p>
+                        <p>Press enter. You will see the result is <code>55</code>.</p>
+                        <p>You might have noticed that pressing <strong>enter/return</strong> ran your code and displayed the result.
+                        What do you do if you want to skip a line to add more code without submitting?
+                        </p>
+                        <br>
+                        <br>
+                        <p>Go to the next line in Javascript Console without running code.
+                            <br><strong>Short Cut: shift + enter</strong>
+                        </p>
+                        <p>Type and try it out:&nbsp;
+                            <pre class="language-javascript">
+                                 <code>
+                                     var num1 = 45;
+                                     var num2 = 20;
+                                     num1 + num2;  // press enter and result 65
+                                 </code>
+                            </pre>
+                        </p>
+                        <br>
+                        <br>
+                        <p>Now let's try another way. We will now use code snippets to run js. With the snippets we can
+                            save many little programs of code without worrying about skipping lines or typos.
+                        </p>
+                        <ul>
+                            <li>Look at your js console tabs and click <strong>Sources</strong>.</li>
+                            <li>Then look at the left panel that just opened and select <strong>Snippets</strong></li>
+                            <li><strong>Right Click </strong>to see options then select <strong>new</strong></li>
+                            <li>Enter a name to save the file. <strong>example1</strong></li>
+                            <li>Now type in the the Snippet Sandbox.</li>
+                            <li>
+                                <pre class="language-javascript">
+                                    <code>
+                                        var num1 = 50;<br>
+                                        var num2 = 50;<br>
+                                        num1 + num2;  // press command + enter and result 100
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>Look at the snippet tabs above the Snippet Sandbox, you should see the name of the snippet you created with a <strong>* </strong>star next to it.
+                            That star means your snippet is not saved.
+                            </li>
+                            <li>Press <strong>Command + s</strong> to save your snippet.</li>
+                            <li>Press <strong>command + enter </strong>from inside the Snippet Sandbox to run. OR press the <strong>Play </strong> button on the right panel.</li>
+                            <li>Notice that the current program just ran and is still active in the console. Go ahead and type <strong>num1 </strong>in console and press <strong>enter</strong>
+                            You will see that <strong>num1 </strong>still exist.
+                            </li>
+                            <li>To clean things up, use short cut key to refresh page.</li>
+                            <li>Refresh Page Short Cut:
+                                <br><strong>command + r </strong>
+                            </li>
+                            <li><div><img src="images/screenshots/snippets.png" alt="snippets image" class="img-responsive"></div></li>
+                        </ul>
 
-            <!-- main view -->
-            <div></div>
+                        <h2>Let's take a look at the basic syntax and grammar.</h2>
+                        <h4>Comments</h4>
+                        <p>You will see a lot of this <strong>//</strong> in the code examples. It simply means leaving a comment.</p>
+                        <pre class="language-javascript">
+                            <code>
+                                // this is a single line comment
+                                var a = 5; // single line comment after legit code
+                                // var a = 5; single line comment, commenting out the code
+                                /*  this is a multi-line comment
+                                    this is a multi-line comment
+                                */
+                            </code>
+                        </pre>
+                        <br>
+                        <h4>JS is case-sensitive</h4>
+                        <p>This mean you can't mix and match upper-case and lower-case<br>
+                            <pre class="language-javascript">
+                                <code>
+                                    var num = 5;
+                                    var Num = 6;
+
+                                    console.log(num); // 5
+                                    console.log(Num); // 6
+                                </code>
+                            </pre>
+                        </p>
+                        <br>
+                        <br>
+                        <p>Use <strong>var</strong> to declare variables.</p>
+                        <pre class="language-javascript">
+                            <code>var name = "Bedford";</code>
+                        </pre>
+                        <p>When declaring variable names you must follow proper naming conventions. Variables are the symbolic <strong>identifier</strong> for
+                        your values in your scripts.</p>
+                        <h4>Identifiers</h4>
+                        <p>
+                            <ul>
+                                <li>Can not be a <a href="http://www.javascripter.net/faq/reserved.htm">reserved word</a>.Example (new, var, default, function)</li>
+                                <li>Must begin with a letter, underscore <span class="under">&nbsp;&nbsp;&nbsp;</span>, or dollar sign <strong>$</strong> and can be followed by numbers
+                                (0,1,2,3 ...)</li>
+                            </ul>
+                        </p>
+                        <p>Pop-Quiz: What Identifiers are valid?
+                            <ul>
+                                <li>A: <br><code class="language-javascript">var 22people = 22;</code></li>
+                                <li>B: <br><code class="language-javascript">var _people = 22;</code></li>
+                                <li>C: <br><code class="language-javascript">var newPeople = 22;</code></li>
+                                <li>D: <br><code class="language-javascript">var new = "people";</code></li>
+                                <li>E: <br><code class="language-javascript">var $people = 22;</code></li>
+                            </ul>
+                        </p>
+                        <p>A few things to note about variables.
+                            <ul>
+                                <li><pre class="language-javascript">
+                                        <code>
+                                            var a; // is undefined
+                                            var b = "name"; // is defined
+                                            console.log("A:" + a); // prints undefined
+                                            console.log("B:" + b); // prints "name"
+                                            console.log("C" + c); // ReferenceError not defined
+                                        </code>
+                                    </pre>
+                                </li>
+                                <li>When writing our programs we will declare all variables at the top of the page for readability.</li>
+                                <li><pre class="language-javascript"><code></code></pre></li>
+                            </ul>
+                        </p>
+
+
+                    </div>
+                    <div id="bm-js-primitives">
+                        <h3>Primitives Data Types & Data Structures</h3>
+                        <p>Data types are the backbone of the language. You will declare the different types and perform evaluations on them.</p>
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Primitive">Primitives:</a> Data that is not an object and has no methods.</li>
+                            <li>Boolean: true or false</li>
+                            <li>null: A Special keyword denoting a null value. It is used to declare a null value;</li>
+                            <li>undefined: A variable that is declared but not defined.</li>
+                            <li>Number: Numerical value 55, 4.56</li>
+                            <li>String: "hello world" as char based value.</li>
+                            <li>Symbol: (ES20150) unique and immutable instances</li>
+                            <li>Data </li>
+                        </ul>
+                    <br>
+                </div> <!-- end of main view-->
+
+            </div> <!-- end of main row -->
         </div>
+
         <!-- logo footer -->
         <div></div>
         <script src="https://code.jquery.com/jquery-2.2.2.js" integrity="sha256-4/zUCqiq0kqxhZIyp4G0Gk+AOtCJsY1TA00k5ClsZYE=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="js/prism.js"></script>
     </body>
 </html>
