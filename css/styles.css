@@ -1,12 +1,56 @@
 
-
-
+/* --------------------------------------*/
 /* colors */
 .red {
     color: red;
 }
+.bg {
+    background-color: rgba(245, 165, 3, 0.5);
+}
+.color-prime-one {
+    color: #0A0A0A; /* black */
+}
+.color-secondary-one {
+    color: #DBDBDB; /* gray */
+}
 
-/* underline */
+.color-accent-one {
+    color: #F2385A; /* strawberry */
+}
+.color-accent-two {
+    color: #F5A503; /* orange */
+}
+.color-accent-three {
+    color: #36B1BF; /* blue */
+}
+/* --------------------------------------*/
+/* page styles -------------------------*/
+a {
+    text-decoration: underline;
+}
+.menu-panel>h3 {
+    color: white;
+    background-color: #36B1BF;
+    padding: 5px;
+
+}
+.main-view {
+    background-color: white;
+}
+
+.info-panel.page-footer {
+    background-color: #BDBDBD;
+    padding: 0em 1em!important;
+
+}
+
+.page-wrapper {
+    /*margin-top: 4em;*/
+}
+strong {
+    color: #0A0A0A; /* black */
+    font-size: 1.5em;
+}
 .under {
     border-bottom: 2px solid black;
 }
@@ -16,22 +60,87 @@ code.language-javascript {
     white-space: pre-line;
 }
 
-/* title-bar */
-.title-bar {
-    border-bottom: 3px solid gray;
+/* ----------------------------------------*/
+/* answer panel*/
+.answer-panel-body {
+    margin-top: 1em;
 }
 
+/* --------------------------------------*/
+/* info panel ------------------------*/
+
+.info-panel {
+    min-height: 500px;
+    padding: 5em 1em 1em 1em;
+}
+.info-panel:nth-of-type(odd) {
+    border-left: 5px solid #F5A503; /* orange */
+}
+.info-panel:nth-of-type(even) {
+    border-left: 5px solid #F2385A; /* strawberry */
+}
+.info-panel:nth-of-type(odd) > h3 {
+    color: white;
+    background-color: #F5A503; /* orange */
+    padding: 5px;
+}
+.info-panel:nth-of-type(even)> h3 {
+    color: white;
+    background-color: #F2385A; /* strawberry */
+    padding: 5px;
+}
+
+
+/* --------------------------------------*/
 /* menu panel */
 .menu-panel {
     position: fixed;
-    padding: 5px;
+    padding: 5em 0em;
+    background-color: white;
+    z-index: 5;
+}
+ul.menu-nav>li>a {
+    color: white;
+    background-color: #36B1BF; /* blue */
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5em;
+    border: 1px solid white;
+}
+ul.menu-nav>li>a:hover, ul.menu-nav>li>a:active {
+    color: #36B1BF; /* blue */
+    background-color: #DBDBDB; /*gray*/
 
 }
 
-/* info panel */
-.info-panel {
-    background-color: gainsboro;
-    min-height: 400px;
-    padding: 5px;
+/* --------------------------------------*/
+/** title-bar -----------------------------*/
+.title {
+    padding-left:2em;
+}
+.title-bar {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    color: white;
+    background-color:  #F2385A; /* blue */
+    border: 5px solid white;
+}
 
+#menu-btn {
+    display: block;
+    width: 5em;
+    color: white;
+    background-color: #36B1BF; /* blue */
+    font-size: 1em;
+    padding: 1em 0.5em;
+    margin: 1em auto;
+    text-decoration: none;
+    border: 2px solid white;
+}
+#menu-btn:hover, #menu-btn:active {
+    color: #36B1BF; /* blue */
+    background-color: #DBDBDB; /*gray*/
+    border: 2px solid white;
 }
