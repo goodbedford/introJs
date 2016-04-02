@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/prism.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-    <body ng-cloak>
+    <body>
         <div class="container-fluid">
             <!-- title-bar -->
             <div  class="row title-bar">
@@ -37,12 +37,12 @@
                             <li><a href="#bm-js-getting-started">Javascript Getting Started</a></li>
                             <li><a href="#bm-js-primitives">Primitive Values</a></li>
                             <li><a href="#bm-js-arrays">Arrays</a></li>
-                            <li><a href="">Objects</a></li>
-                            <li><a href="">Control Flow</a></li>
-                            <li><a href="">Loops & Iterations</a></li>
-                            <li><a href="">Bootstrap</a></li>
-                            <li><a href="">DOM Events</a></li>
-                            <li><a href="">Jquery</a></li>
+                            <li><a href="#bm-js-functions">Functions</a></li>
+                            <li><a href="#bm-js-control-flow">Control Flow</a></li>
+                            <li><a href="#bm-js-loops">Loops & Iterations</a></li>
+                            <li><a href="#bm-js-bootstrap">Bootstrap</a></li>
+                            <li><a href="#bm-js-dom">DOM Events</a></li>
+                            <li><a href="#bm-js-jquery">Jquery</a></li>
                             <li><a href="#bm-js-resources">Resources</a></li>
                             <li><a href=""></a></li>
                         </ul>
@@ -51,130 +51,202 @@
                 <!-- main view -->
                 <div id="main-wrapper" class="col-xs-10 col-xs-offset-4 col-sm-offset-0">
                     <div id="bm-js-intro"class="main-view ">
-                        <div  class="info-panel">
-                            <h3>Introduction</h3>
-                            <h2>Hi my name is Bedford and I <i class="fa fa-heart red"></i> Javascript.</h2>
-                            <p>I thank you all for coming today. I also would like to thank all the people I learned from along the way.</p>
-                            <p>Let's go around the room and state your name, a nickname, and what you hope to build.</p>
-                            <iframe src="//giphy.com/embed/UQi1RiWxHm8Lu" width="480" height="366" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/computer-schoolhouse-rock-scooter-mr-chips-UQi1RiWxHm8Lu">via GIPHY</a></p>
-                        </div>
-                        <div id="bm-js-expectations" class="info-panel">
-                            <h3>Expectations</h3>
-                            <p>Javascript is a really fun language with a few gotchas. Today we will take a bird's-eye view of the spec and occasionally swoop in for a deep dive.
-                                Some of the material may be difficult or easy depending on your programming background. I will encourage you to collaborate with each other. I believe that pair programming is really positive for growth. Try your best to make this
-                                a challenging and safe learning space. I will be passing around a marker to each one of you. If you have the marker you must contribute with a statement, a question or ask for help.
-                                If you never programmed in Javascript or want to be guided through getting started, this will be helpful.
-                                If your are using all the newest and baddest,Bower, NPM, Angular, React, Node then this class will be less of what your looking for.
-                            </p>
-                            <h4>Objectives:</h4>
-                            <ul>
-                                <li>Learn Javascript History</li>
-                                <li>Learn Javascript Fundamentals</li>
-                                <li>Learn DOM Events</li>
-                                <li>Learn JQuery</li>
-                                <li>Learn Problem Solving & Best Practices</li>
-                                <li>Learn Helpful Resources</li>
-                            </ul>
-                        </div>
-                        <div id="bm-js-history" class="info-panel">
-                            <h3>Javascript History</h3>
-                            <div><img src="images/screenshots/js-history.png" alt="history timeline" class="img-responsive"></div>
-                            <br>
-                            <p>Javascript is a light-weight dynamically typed programming language. Javascript was invented in 1995 by Brendan Eich. It has since gone on to become one of the three pillars in web development. HTML, CSS and Javascript comprise the
-                                three pillars of the web. You can do almost anything with those three languages.</p>
-                            <p>Today we will be working in ES5 or ECMASCRIPT 5th edition. Javascript is now maintained by the
-                                <a href="https://github.com/tc39" target="_blank">TC39</a> technical working group and
-                                <a href="http://www.ecma-international.org/" target="_blank">ECMA</a>(European Computer Manufacturers Association) Governing Body.
-                                <a href="http://www.ecma-international.org/ecma-262/6.0/index.html">ES6 also known as ES2015</a> is the latest release but not fully
-                                <a href="http://caniuse.com/#search=ECMAScript">implemented amongst browsers</a>.</p>
-                            <ul>
-                                <li><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">Javascript Wiki</a></li>
-                                <li><a href="https://brendaneich.com/" target="_blank">Brendan Eich.com</a></li>
-                                <li><a href="https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich" target="_blank">AUDIO: Origin of Javascript by Brendan Eich</a></li>
-                                <li><a href="http://caniuse.com/#search=ECMAScript" target="_blank">Can I Use ECMASCRIPT</a></li>
-                                <li><a href="http://kangax.github.io/compat-table/es6/" target="_blank">ES6 Compatibility Table</a></li>
-                                <li><a href="http://www.2ality.com/2011/06/ecmascript.html" target="_blank">ECMASCRIPT explanation</a></li>
-                            </ul>
-                        </div>
-                        <div id="bm-js-getting-started" class="info-panel">
-                            <h3>Javascript Getting Started</h3>
-                            <div>
-                                <h4>Helpful Terms & Symbols</h4>
-                                <p>We will use a lot of different terminologies and symbols during this course. Here are a few to get started.</p>
-                                <ul class="list-unstyled">
-                                    <li><strong>( )</strong> parentheses or grouping operator - we use these to call functions, to put in arguments and for precedence</li>
-                                    <li><strong>(</strong> open parenthesis.</li>
-                                    <li><strong>)</strong> closing parenthesis.</li>
-                                    <li><strong>{ }</strong> curly braces - we use these to show blocks of code</li>
-                                    <li><strong>{</strong> open curly brace</li>
-                                    <li><strong>}</strong> closing curly brace</li>
-                                    <li><strong>[ ]</strong> brackets - we use these for arrays, accessing object properties, and bracket notation</li>
-                                    <li><strong>[</strong> open bracket</li>
-                                    <li><strong>]</strong>  closed bracket</li>
-                                    <li><strong>;</strong> semi colon - we use this to end statements or lines of code</li>
-                                    <li><strong>< ></strong> angle brackets - we use these for html tags, greater than, less than</li>
-                                    <li><strong>< </strong>less than</li>
-                                    <li><strong>> </strong>greater than</li>
-                                    <li><strong>- </strong>hyphen</li>
-                                    <li><strong>hyphenated-case:</strong> we use this for css classes and html ids</li>
-                                    <li><strong>camelCase</strong> we use this to write variable names in javascript</li>
-                                    <li><strong>PascalCase</strong> we use in multi named object constructors and error types</li>
-                                    <li><strong>snake_case</strong> we use this to write variable names in databases</li>
-                                    <li><strong>&amp;&amp;</strong> double ampersand means <strong>AND</strong></li>
-                                    <li><strong>||</strong> double pipe means <strong>OR</strong></li>
-                                    <li><strong>!</strong> bang means <strong>NOT</strong></li>
-                                    <li><strong>taco</strong> I use this term to indicate that the text doesn't matter, it could be anything like "taco"</li>
-                                    <li><strong>vanilla javascript</strong> term means standard js not plugins or frameworks</li>
-                                    <li><strong>browser</strong> we use this to view the internet with programs such as Chrome, Safari, Firefox, IE</li>
-                                    <li><strong>style sheets</strong> term means the file for your css(cascading style sheets) which is the styling of your site</li>
-                                    <li><strong>text editor</strong> term means the program that you will write code into,
-                                        <a href="http://www.sublimetext.com/" target="_blank">SublimeText</a>, <a
-                                                href="http://brackets.io/" target="_blank">Brackets</a>, <a href="https://atom.io/">Atom</a>,
-                                        <a href="https://www.jetbrains.com/webstorm/">Webstorm</a></li>
-                                    <li><strong><a href="https://en.wikipedia.org/wiki/Punctuation" target="_blank">List of Punctuations</a></strong></li>
-                                </ul>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <!-- introduction -->
+                                <div  class="info-panel">
+                                    <h3>Introduction</h3>
+                                    <h2>Hi my name is Bedford and I <i class="fa fa-heart red"></i> Javascript.</h2>
+                                    <p>I thank you all for coming today. I also would like to thank all the people I learned from along the way.</p>
+                                    <p>Let's go around the room and state your name, a nickname, and what you hope to build.</p>
+                                    <iframe src="//giphy.com/embed/UQi1RiWxHm8Lu" width="480" height="366" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/computer-schoolhouse-rock-scooter-mr-chips-UQi1RiWxHm8Lu">via GIPHY</a></p>
+                                </div>
                             </div>
                         </div>
-                        <!-- chrome dev tools -->
-                        <div id="bm-js-chrome-dev-tools" class="info-panel">
-                            <!-- chrome dev tools-->
-                            <h3>Chrome Developer Tools</h3>
-                            <iframe src="//giphy.com/embed/EbE4N87Yc90lO" width="480" height="370" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/disney-love-black-and-white-EbE4N87Yc90lO">via GIPHY</a></p>
-                            <p>We will use the Chrome Developer Tool or similar. Open your browser and then Javascript Console.
-                                <br>Open Javascript Console.
-                                <br><strong>Short Cut: option + command + j</strong>
-                            </p>
-                            <p>Type <code>45 + 10;</code></p>
-                            <p>Press enter. You will see the result is <code>55</code>.</p>
-                            <p>You might have noticed that pressing <strong>enter/return</strong> ran your code and displayed the result.
-                                What do you do if you want to skip a line to add more code without submitting?
-                            </p>
-                            <br>
-                            <br>
-                            <p>Go to the next line in Javascript Console without running code.
-                                <br><strong>Short Cut: shift + enter</strong>
-                            </p>
-                            <p>Type and try it out:&nbsp;
-                            <pre class="language-javascript">
-                                 <code>
-                                     var num1 = 45;
-                                     var num2 = 20;
-                                     num1 + num2;  // press enter and result 65
-                                 </code>
-                            </pre>
-                            </p>
-                            <br>
-                            <br>
-                            <p>Now let's try another way. We will now use code snippets to run js. With the snippets we can
-                                save many little programs of code without worrying about skipping lines or typos.
-                            </p>
-                            <ul class="list-unstyled">
-                                <li>Look at your js console tabs and click <strong>Sources</strong>.</li>
-                                <li>Then look at the left panel that just opened and select <strong>Snippets</strong></li>
-                                <li><strong>Right Click </strong>to see options then select <strong>new</strong></li>
-                                <li>Enter a name to save the file. <strong>example1</strong></li>
-                                <li>Now type in the the Snippet Sandbox.</li>
-                                <li>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <!--expectations -->
+                                <div id="bm-js-expectations" class="info-panel">
+                                    <h3>Expectations</h3>
+                                    <p>Javascript is a really fun language with a few gotchas. Today we will take a bird's-eye view of the spec and occasionally swoop in for a deep dive.
+                                        Some of the material may be difficult or easy depending on your programming background. I will encourage you to collaborate with each other. I believe that pair programming is really positive for growth. Try your best to make this
+                                        a challenging and safe learning space. I will be passing around a marker to each one of you. If you have the marker you must contribute with a statement, a question or ask for help.
+                                        If you never programmed in Javascript or want to be guided through getting started, this will be helpful.
+                                        If your are using all the newest and baddest,Bower, NPM, Angular, React, Node then this class will be less of what your looking for.
+                                    </p>
+                                    <h4>Objectives:</h4>
+                                    <ul>
+                                        <li>Learn Javascript History</li>
+                                        <li>Learn Javascript Fundamentals</li>
+                                        <li>Learn DOM Events</li>
+                                        <li>Learn JQuery</li>
+                                        <li>Learn Problem Solving & Best Practices</li>
+                                        <li>Learn Helpful Resources</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div id="bm-js-history" class="info-panel">
+                                    <h3>Javascript History</h3>
+                                    <div><img src="images/screenshots/js-history.png" alt="history timeline" class="img-responsive"></div>
+                                    <br>
+                                    <p>Javascript is a light-weight dynamically typed programming language. Javascript was invented in 1995 by Brendan Eich. It has since gone on to become one of the three pillars in web development. HTML, CSS and Javascript comprise the
+                                        three pillars of the web. You can do almost anything with those three languages.</p>
+                                    <p>Today we will be working in ES5 or ECMASCRIPT 5th edition. Javascript is now maintained by the
+                                        <a href="https://github.com/tc39" target="_blank">TC39</a> technical working group and
+                                        <a href="http://www.ecma-international.org/" target="_blank">ECMA</a>(European Computer Manufacturers Association) Governing Body.
+                                        <a href="http://www.ecma-international.org/ecma-262/6.0/index.html">ES6 also known as ES2015</a> is the latest release but not fully
+                                        <a href="http://caniuse.com/#search=ECMAScript">implemented amongst browsers</a>.</p>
+                                    <ul>
+                                        <li><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">Javascript Wiki</a></li>
+                                        <li><a href="https://brendaneich.com/" target="_blank">Brendan Eich.com</a></li>
+                                        <li><a href="https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich" target="_blank">AUDIO: Origin of Javascript by Brendan Eich</a></li>
+                                        <li><a href="http://caniuse.com/#search=ECMAScript" target="_blank">Can I Use ECMASCRIPT</a></li>
+                                        <li><a href="http://kangax.github.io/compat-table/es6/" target="_blank">ES6 Compatibility Table</a></li>
+                                        <li><a href="http://www.2ality.com/2011/06/ecmascript.html" target="_blank">ECMASCRIPT explanation</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div id="bm-js-getting-started" class="info-panel">
+                                    <h3>Javascript Getting Started</h3>
+                                    <div>
+                                        <h4>Helpful Terms & Symbols</h4>
+                                        <p>We will use a lot of different terminologies and symbols during this course. Here are a few to get started.</p>
+                                        <ul class="list-unstyled">
+                                            <li><strong>( )</strong> parentheses or grouping operator - we use these to call functions, to put in arguments and for precedence</li>
+                                            <li><strong>(</strong> open parenthesis.</li>
+                                            <li><strong>)</strong> closing parenthesis.</li>
+                                            <li><strong>{ }</strong> curly braces - we use these to show blocks of code</li>
+                                            <li><strong>{</strong> open curly brace</li>
+                                            <li><strong>}</strong> closing curly brace</li>
+                                            <li><strong>[ ]</strong> brackets - we use these for arrays, accessing object properties, and bracket notation</li>
+                                            <li><strong>[</strong> open bracket</li>
+                                            <li><strong>]</strong>  closed bracket</li>
+                                            <li><strong>;</strong> semi colon - we use this to end statements or lines of code</li>
+                                            <li><strong>< ></strong> angle brackets - we use these for html tags, greater than, less than</li>
+                                            <li><strong>< </strong>less than</li>
+                                            <li><strong>> </strong>greater than</li>
+                                            <li><strong>- </strong>hyphen</li>
+                                            <li><strong>hyphenated-case:</strong> we use this for css classes and html ids</li>
+                                            <li><strong>camelCase</strong> we use this to write variable names in javascript</li>
+                                            <li><strong>PascalCase</strong> we use in multi named object constructors and error types</li>
+                                            <li><strong>snake_case</strong> we use this to write variable names in databases</li>
+                                            <li><strong>&amp;&amp;</strong> double ampersand means <strong>AND</strong></li>
+                                            <li><strong>||</strong> double pipe means <strong>OR</strong></li>
+                                            <li><strong>!</strong> bang means <strong>NOT</strong></li>
+                                            <li><strong>taco</strong> I use this term to indicate that the text doesn't matter, it could be anything like "taco"</li>
+                                            <li><strong>vanilla javascript</strong> term means standard js not plugins or frameworks</li>
+                                            <li><strong>browser</strong> we use this to view the internet with programs such as Chrome, Safari, Firefox, IE</li>
+                                            <li><strong>style sheets</strong> term means the file for your css(cascading style sheets) which is the styling of your site</li>
+                                            <li><strong>text editor</strong> term means the program that you will write code into,
+                                                <a href="http://www.sublimetext.com/" target="_blank">SublimeText</a>, <a
+                                                  href="http://brackets.io/" target="_blank">Brackets</a>, <a href="https://atom.io/">Atom</a>,
+                                                <a href="https://www.jetbrains.com/webstorm/">Webstorm</a></li>
+                                            <li><strong><a href="https://en.wikipedia.org/wiki/Punctuation" target="_blank">List of Punctuations</a></strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <!-- chrome dev tools -->
+                                <div id="bm-js-chrome-dev-tools" class="info-panel">
+                                  <!-- chrome dev tools-->
+                                  <h3>Chrome Developer Tools</h3>
+                                  <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                      <iframe src="//giphy.com/embed/EbE4N87Yc90lO" frameBorder="0" class="" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/disney-love-black-and-white-EbE4N87Yc90lO">via GIPHY</a></p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                      <p>We will use the Chrome Developer Tool or similar. Open your browser and then Javascript Console.
+                                        <br>Open Javascript Console.
+                                        <br><strong>Short Cut: option + command + j</strong>
+                                      </p>
+                                      <p>Type <code>45 + 10;</code></p>
+                                      <p>Press enter. You will see the result is <code>55</code>.</p>
+                                      <p>You might have noticed that pressing <strong>enter/return</strong> ran your code and displayed the result.
+                                        What do you do if you want to skip a line to add more code without submitting?
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <p>Go to the next line in Javascript Console without running code.
+                                        <br><strong>Short Cut: shift + enter</strong>
+                                      </p>
+                                      <p>Type and try it out:&nbsp;
+                                      <pre class="language-javascript">
+                                           <code>
+                                               var num1 = 45;
+                                               var num2 = 20;
+                                               num1 + num2;  // press enter and result 65
+                                           </code>
+                                      </pre>
+                                      </p>
+                                      <p>Now let's try another way. We will now use code snippets to run js. With the snippets we can
+                                        save many little programs of code without worrying about skipping lines or typos.
+                                      </p>
+                                      <ul class="list-unstyled">
+                                        <li>Look at your js console tabs and click <strong>Sources</strong>.</li>
+                                        <li>Then look at the left panel that just opened and select <strong>Snippets</strong></li>
+                                        <li><strong>Right Click </strong>to see options then select <strong>new</strong></li>
+                                        <li>Enter a name to save the file. <strong>example1</strong></li>
+                                        <li>Now type in the the Snippet Sandbox.</li>
+                                        <li>
+                                          <pre class="language-javascript">
+                                              <code>
+                                                  var num1 = 50;<br>
+                                                  var num2 = 50;<br>
+                                                  num1 + num2;  // press command + enter and result 100
+                                              </code>
+                                          </pre>
+                                        </li>
+                                        <li>Look at the snippet tabs above the Snippet Sandbox, you should see the name of the snippet you created with a <strong>* </strong>star next to it.
+                                          That star means your snippet is not saved.
+                                        </li>
+                                        <li>Press <strong>command + s</strong> to save your snippet.</li>
+                                        <li>Press <strong>command + enter </strong>from inside the Snippet Sandbox to run. OR press the <strong>Play </strong> button on the right panel.</li>
+                                        <li>Notice that the current program just ran and is still active in the console. Go ahead and type <strong>num1 </strong>in console and press <strong>enter</strong>
+                                          You will see that <strong>num1 </strong>still exist.
+                                        </li>
+                                        <li>To clean things up, use short cut key to refresh page.</li>
+                                        <li>Refresh Page Short Cut:
+                                          <br><strong>command + r </strong>
+                                        </li>
+                                        <li><div><img src="images/screenshots/snippets.png" alt="snippets image" class="img-responsive"></div></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                    <p>Go to the next line in Javascript Console without running code.
+                                        <br><strong>Short Cut: shift + enter</strong>
+                                    </p>
+                                    <p>Type and try it out:&nbsp;
+                                      <pre class="language-javascript">
+                                           <code>
+                                               var num1 = 45;
+                                               var num2 = 20;
+                                               num1 + num2;  // press enter and result 65
+                                           </code>
+                                      </pre>
+                                    </p>
+                                    <br>
+                                    <br>
+                                    <p>Now let's try another way. We will now use code snippets to run js. With the snippets we can
+                                        save many little programs of code without worrying about skipping lines or typos.
+                                    </p>
+                                    <ul class="list-unstyled">
+                                        <li>Look at your js console tabs and click <strong>Sources</strong>.</li>
+                                        <li>Then look at the left panel that just opened and select <strong>Snippets</strong></li>
+                                        <li><strong>Right Click </strong>to see options then select <strong>new</strong></li>
+                                        <li>Enter a name to save the file. <strong>example1</strong></li>
+                                        <li>Now type in the the Snippet Sandbox.</li>
+                                        <li>
                                 <pre class="language-javascript">
                                     <code>
                                         var num1 = 50;<br>
@@ -182,39 +254,57 @@
                                         num1 + num2;  // press command + enter and result 100
                                     </code>
                                 </pre>
-                                </li>
-                                <li>Look at the snippet tabs above the Snippet Sandbox, you should see the name of the snippet you created with a <strong>* </strong>star next to it.
-                                    That star means your snippet is not saved.
-                                </li>
-                                <li>Press <strong>command + s</strong> to save your snippet.</li>
-                                <li>Press <strong>command + enter </strong>from inside the Snippet Sandbox to run. OR press the <strong>Play </strong> button on the right panel.</li>
-                                <li>Notice that the current program just ran and is still active in the console. Go ahead and type <strong>num1 </strong>in console and press <strong>enter</strong>
-                                    You will see that <strong>num1 </strong>still exist.
-                                </li>
-                                <li>To clean things up, use short cut key to refresh page.</li>
-                                <li>Refresh Page Short Cut:
-                                    <br><strong>command + r </strong>
-                                </li>
-                                <li><div><img src="images/screenshots/snippets.png" alt="snippets image" class="img-responsive"></div></li>
-                            </ul>
-                            <h3>Console.log</h3>
-                            <p><strong>console.log</strong> is our friend. We will use this simple command again and again. console.log is the what we type to print to the standard output which is our console.
-                                console is an object and log is a method. We call this by putting variables into the parentheses <strong>( )</strong> of log.
-                                More on this later. For now just follow along.
-                            </p>
-                            <script src="https://gist.github.com/goodbedford/a19808fc73860d939a3d6fc00dceca06.js"></script>
+                                        </li>
+                                        <li>Look at the snippet tabs above the Snippet Sandbox, you should see the name of the snippet you created with a <strong>* </strong>star next to it.
+                                            That star means your snippet is not saved.
+                                        </li>
+                                        <li>Press <strong>command + s</strong> to save your snippet.</li>
+                                        <li>Press <strong>command + enter </strong>from inside the Snippet Sandbox to run. OR press the <strong>Play </strong> button on the right panel.</li>
+                                        <li>Notice that the current program just ran and is still active in the console. Go ahead and type <strong>num1 </strong>in console and press <strong>enter</strong>
+                                            You will see that <strong>num1 </strong>still exist.
+                                        </li>
+                                        <li>To clean things up, use short cut key to refresh page.</li>
+                                        <li>Refresh Page Short Cut:
+                                            <br><strong>command + r </strong>
+                                        </li>
+                                        <li><div><img src="images/screenshots/snippets.png" alt="snippets image" class="img-responsive"></div></li>
+                                    </ul>
+                                    <h3>Console.log</h3>
+                                    <div class="row">
+                                      <div class="col-xs-12 col-sm-4">
+                                        <p><strong>console.log</strong> is our friend. We will use this simple command again and again. console.log is the what we type to print to the standard output which is our console.
+                                          console is an object and log is a method. We call this by putting variables into the parentheses <strong>( )</strong> of log.
+                                          More on this later. For now just follow along.
+                                        </p>
+                                      </div>
+                                      <div class="col-xs-12 col-sm-8">
+                                        <script src="https://gist.github.com/goodbedford/a19808fc73860d939a3d6fc00dceca06.js"></script>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- basic syntax-->
-                        <div id="bm-js-basic-syntax" class="info-panel">
-                            <h3>Let's take a look at the basic syntax and grammar.</h3>
-                            <h4>Comments</h4>
-                            <p>You will see a lot of this <strong>//</strong> in the code examples. It simply means leaving a comment.</p>
-                            <script src="https://gist.github.com/goodbedford/7d3665cda6a2c608cd5238665eb257b7.js"></script>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <!-- basic syntax-->
+                                <div id="bm-js-basic-syntax" class="info-panel">
+                                    <h3>Let's take a look at the basic syntax and grammar.</h3>
+                                    <h4>Comments</h4>
+                                    <div class="col-sm-8">
+                                      <script src="https://gist.github.com/goodbedford/7d3665cda6a2c608cd5238665eb257b7.js"></script>
+                                    </div>
+                                    <div class="col-sm-4">
+                                      <p>You will see a lot of this <strong>//</strong> in the code examples. It simply means leaving a comment.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- case sensitive-->
-                        <div id="bm-js-case-sensitive" class="info-panel">
-                            <h3>JS is case-sensitive</h3>
-                            <p>This mean you can't mix and match upper-case and lower-case<br>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <!-- case sensitive-->
+                                <div id="bm-js-case-sensitive" class="info-panel">
+                                    <h3>JS is case-sensitive</h3>
+                                    <p>This mean you can't mix and match upper-case and lower-case<br>
                                 <pre class="language-javascript">
                                     <code>
                                         var num = 5;
@@ -224,105 +314,142 @@
                                         console.log(Num); // 6
                                     </code>
                                 </pre>
-                            </p>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <!-- identifiers --->
-                        <div id="bm-js-identifiers" class="info-panel">
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <!-- identifiers --->
+                          <div id="bm-js-identifiers" class="info-panel">
                             <h3>Identifiers</h3>
-                            <p>When declaring variable names you must follow proper naming conventions. Variables are the symbolic <strong>identifier</strong> for
-                                your values in your scripts.</p>
-                            <ul>
-                                <li>Can not be a <a href="http://www.javascripter.net/faq/reserved.htm">reserved word</a>.Example (new, var, default, function)</li>
-                                <li>Must begin with a letter, underscore <span class="under">&nbsp;&nbsp;&nbsp;</span>, or dollar sign <strong>$</strong> and can be followed by numbers
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <p>When declaring variable names you must follow proper naming conventions. Variables are the symbolic <strong>identifier</strong> for
+                                  your values in your scripts.</p>
+                              </div>
+                              <div class="col-sm-6">
+                                <ul>
+                                  <li>Can not be a <a href="http://www.javascripter.net/faq/reserved.htm">reserved word</a>.Example (new, var, default, function)</li>
+                                  <li>Must begin with a letter, underscore <span class="under">&nbsp;&nbsp;&nbsp;</span>, or dollar sign <strong>$</strong> and can be followed by numbers
                                     (0,1,2,3 ...)
-                                </li>
-                                <li><a href="https://mathiasbynens.be/notes/javascript-identifiers" target="_blank">reserve words blog post</a></li>
-                            </ul>
+                                  </li>
+                                  <li><a href="https://mathiasbynens.be/notes/javascript-identifiers" target="_blank">reserve words blog post</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <!-- use var  -->
-                        <div id="bm-js-var" class="info-panel">
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <!-- use var  -->
+                          <div id="bm-js-var" class="info-panel">
                             <h3>Use <strong>var</strong> to declare variables.</h3>
                             <pre class="language-javascript">
                                 <code>
                                     var name = "Bedford";
                                 </code>
                             </pre>
+                          </div>
                         </div>
-                        <!-- vars on top -->
-                        <div id="bm-js-vars-on-top" class="info-panel">
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <!-- vars on top -->
+                          <div id="bm-js-vars-on-top" class="info-panel">
                             <h3>A few things to note about variables.</h3>
                             <ul class="list-unstyled">
-                                <li>When writing our programs we will declare all variables at the top of the page for readability.</li>
+                              <li>When writing our programs we will declare all variables at the top of the page for readability.</li>
                             </ul>
                             <script src="https://gist.github.com/goodbedford/244f4f5ca65fee957692b3a046068e21.js"></script>
+                          </div>
                         </div>
-                        <!-- pop quiz -->
-                        <div id="bm-js-pop-quiz-identifiers" class="info-panel">
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <!-- pop quiz -->
+                          <div id="bm-js-pop-quiz-identifiers" class="info-panel">
                             <h3>Pop-Quiz: What Identifiers are valid?</h3>
                             <ul class="list-unstyled">
-                                <li>A: <br><code class="language-javascript">var 22people = 22;</code></li>
-                                <li>B: <br><code class="language-javascript">var _people = 22;</code></li>
-                                <li>C: <br><code class="language-javascript">var newPeople = 22;</code></li>
-                                <li>D: <br><code class="language-javascript">var new = "people";</code></li>
-                                <li>E: <br><code class="language-javascript">var $people = 22;</code></li>
+                              <li>A: <br><code class="language-javascript">var 22people = 22;</code></li>
+                              <li>B: <br><code class="language-javascript">var _people = 22;</code></li>
+                              <li>C: <br><code class="language-javascript">var newPeople = 22;</code></li>
+                              <li>D: <br><code class="language-javascript">var new = "people";</code></li>
+                              <li>E: <br><code class="language-javascript">var $people = 22;</code></li>
                             </ul>
                             <p data-height="268" data-theme-id="0" data-slug-hash="EKwgNb" data-default-tab="result" data-user="goodbedford" class="codepen">See the Pen <a href="http://codepen.io/goodbedford/pen/EKwgNb/">pop quiz</a> by goodbedford (<a href="http://codepen.io/goodbedford">@goodbedford</a>) on <a href="http://codepen.io">CodePen</a>.</p>
                             <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                          </div>
                         </div>
-                        <!-- primitives -->
-                        <div id="bm-js-primitives" class="info-panel">
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <!-- primitives -->
+                          <div id="bm-js-primitives" class="info-panel">
                             <div>
-                                <h3>Primitives Data Types & Data Structures</h3>
-                                <p>Data types are the backbone of the language. You will declare the different types and perform evaluations on them.
-                                    <a href="https://developer.mozilla.org/en-US/docs/Glossary/Primitive" target="_blank">Primitives:</a>Data that is not an object.
-                                </p>
-                                <ul class="list-unstyled">
-                                    <li><strong>Boolean</strong>: true or false
-                                        <br>
+                              <h3>Primitives Data Types & Data Structures</h3>
+                              <p>Data types are the backbone of the language. You will declare the different types and perform evaluations on them.
+                                <a href="https://developer.mozilla.org/en-US/docs/Glossary/Primitive" target="_blank">Primitives:</a>Data that is not an object.
+                              </p>
+                              <ul class="list-unstyled">
+                                <li><strong>Boolean</strong>: true or false
+                                  <br>
                                         <pre class="language-javascript">
                                             <code>
                                                 var isOpen = true;
                                                 var isClosed = false;
                                             </code>
                                         </pre>
-                                    </li>
-                                    <li><strong>null</strong>: A Special keyword denoting a null value. It is used to declare a null value;
-                                        <br>
-                                        <code class="language-javascript">
-                                            var animalHouse = null;
-                                        </code>
-                                    </li>
-                                    <li><strong>undefined</strong>: A variable that is declared but not defined.
-                                        <br>
-                                        <code class="language-javascript">
-                                            var animalHouse;
-                                        </code>
-                                    </li>
-                                    <li><strong>Number</strong>: Numerical value 55, 4.56
-                                        <br>
-                                        <code class="language-javascript">
-                                            var numOfCars = 300;
-                                        </code>
-                                    </li>
-                                    <li><strong>String</strong>: "hello world" as char based value.
-                                        <br>
+                                </li>
+                                <li><strong>null</strong>: A Special keyword denoting a null value. It is used to declare a null value;
+                                  <br>
+                                  <code class="language-javascript">
+                                    var animalHouse = null;
+                                  </code>
+                                </li>
+                                <li><strong>undefined</strong>: A variable that is declared but not defined.
+                                  <br>
+                                  <code class="language-javascript">
+                                    var animalHouse;
+                                  </code>
+                                </li>
+                                <li><strong>Number</strong>: Numerical value 55, 4.56
+                                  <br>
+                                  <code class="language-javascript">
+                                    var numOfCars = 300;
+                                  </code>
+                                </li>
+                                <li><strong>String</strong>: "hello world" as char based value.
+                                  <br>
                                     <pre class="language-javascript">
                                         <code>
                                             var someString = "I am a string with double quotes.";
                                             var otherString = 'I am a string with single quotes. No difference.';
                                         </code>
                                     </pre>
-                                    </li>
-                                    <li><strong>Symbol</strong>: (ES-2015) unique and immutable instances
-                                        <br>
-                                        <code class="language-javascript">
-                                            var sym1 = new Symbol("someText");
-                                        </code>
-                                    </li>
-                                    <li>Other Data Types</li>
-                                    <li><strong>Object</strong>: A data type that contains data and instructions for working with it. Methods(are functions that belong to an object). Objects
-                                        are also used to represent real-world things (cars, people, events...).
-                                        <br>
+                                </li>
+                                <li><strong>Symbol</strong>: (ES-2015) unique and immutable instances
+                                  <br>
+                                  <code class="language-javascript">
+                                    var sym1 = new Symbol("someText");
+                                  </code>
+                                </li>
+                                <li>Other Data Types</li>
+                                <li><strong>functions</strong></li>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions" target="_blank">functions</a></li>
+                                <li>
+                                  <pre class="language-javascript">
+                                    <code>
+                                      function doSomething() {
+                                        //do something;
+                                      }
+                                    </code>
+                                  </pre>
+                                </li>
+                                <li><strong>Object</strong>: A data type that contains data and instructions for working with it. Methods(are functions that belong to an object). Objects
+                                  are also used to represent real-world things (cars, people, events...).
+                                  <br>
                                     <pre class="language-javascript">
                                        <code>
                                            var listOfSupplies = ["paper", "pencils", "pen", "markers"]; // array
@@ -342,9 +469,9 @@
                                            car["color"] = "blue";
                                        </code>
                                     </pre>
-                                    </li>
-                                </ul>
-                                <h4>Run each console.log from your console.</h4>
+                                </li>
+                              </ul>
+                              <h4>Run each console.log from your console.</h4>
                             <pre class="language-javascript">
                                 <code>
                                     console.log("typeof true:", typeof true);
@@ -364,110 +491,226 @@
                             </pre>
                             </div>
                             <br>
+                          </div>
                         </div>
-                        <!-- arrays -->
-                        <div id="bm-js-arrays" class="info-panel">
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <!-- arrays -->
+                          <div id="bm-js-arrays" class="info-panel">
                             <h3>Arrays</h3>
-                            <h4><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>: are objects used to store list of variables of any type.
-                            </h4>
-                            <script src="https://gist.github.com/goodbedford/f54036beeb0a11143f327a06fe1ae70b.js"></script>
-                            <h4><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties" target="_blank">Array Length Property</a></h4>
-                            <script src="https://gist.github.com/goodbedford/2899c26d8cc5fd2353ef8763818cedc8.js"></script>
-
+                            <div class="row">
+                              <div class="col-sm-4">
+                                <h4><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>: are objects used to store list of variables of any type.
+                                </h4>
+                              </div>
+                              <div class="col-sm-8">
+                                <script src="https://gist.github.com/goodbedford/f54036beeb0a11143f327a06fe1ae70b.js"></script>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-sm-4">
+                                <h4><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties" target="_blank">Array Length Property</a></h4>
+                              </div>
+                              <div class="col-sm-8">
+                                <script src="https://gist.github.com/goodbedford/2899c26d8cc5fd2353ef8763818cedc8.js"></script>
+                              </div>
+                            </div>
                             <h4>Array Index</h4>
                             <p>Note: Arrays begin at index <strong>Zero</strong>. This can sum times cause the 1-off errors. These type of logic errors usually
-                                don't stop the program and can be over looked.
+                              don't stop the program and can be over looked.
                             </p>
                             <script src="https://gist.github.com/goodbedford/f3feb4910af261b6c1e7621ff547f55d.js"></script>
 
-                            <h4>Array Push/Pop/Shift/Unshift</h4>
+                            <h4>
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" target="_blank">Array Pop</a>/
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">Push</a>/
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift" target="_blank">Shift</a>/
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift" target="_blank">Unshift</a>
+                            </h4>
                             <script src="https://gist.github.com/goodbedford/43aeee08a94a69d62c2b6b45c67b67c5.js"></script>
                             <h3>Pop Quiz: Push,Pop,Unshift,Shift</h3>
                             <script src="https://gist.github.com/goodbedford/9656983eac725500bcfe7a30527d52f5.js"></script>
                             <div id="display-answer-pop-quiz-array-1" class="answer-panel">
-                                <button  class="btn-answer">Answer</button>
-                                <div id="btn-pop-quiz-array-1" class="answer-panel-body hidden">
-                                    <script src="https://gist.github.com/goodbedford/559852cd81818900742d4875a71c5597.js"></script>
-                                </div>
+                              <button  class="btn-answer">Answer</button>
+                              <div id="btn-pop-quiz-array-1" class="answer-panel-body hidden">
+                                <script src="https://gist.github.com/goodbedford/559852cd81818900742d4875a71c5597.js"></script>
+                              </div>
                             </div>
 
-                            <h4>Array Slice/Copy</h4>
+                            <h4><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice" target="_blank">Array Slice/Copy</a></h4>
+                            <p>Slice is used to copy out a section of an array. Use slice to get a continuous part of an array. It returns an array.</p>
+                            <script src="https://gist.github.com/goodbedford/114f5c2ee83366441fbecba870f59eb9.js"></script>
 
+                            <h4><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank">Splice</a></h4>
+                            <p>Splice is used to remove or add a section of items to an array. This returns an array of the deleted items.</p>
+                            <script src="https://gist.github.com/goodbedford/12e5d9e49ac7fe6e73d0ec9fba29a45a.js"></script>
+
+                            <h4><a href="">Join</a></h4>
+                            <p>Join is for taking an array join it into a string. Useful for manipulating list.</p>
+                            <script src="https://gist.github.com/goodbedford/c2d5fabe5908cd2e5cb8b50dee86e6d5.js"></script>
+                          </div>
                         </div>
-                        <!-- operators -->
-                        <div id="bm-js-operators" class="info-panel">
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <!-- operators -->
+                          <div id="bm-js-operators" class="info-panel">
                             <h3>Operators</h3>
                             <p>Javascript has a host of operators. We will review the most used ones.
-                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#Relational_operators">Full List of Operators</a>
+                              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#Relational_operators">Full List of Operators</a>
                             </p>
-
-
                             <ul class="list-unstyled">
-                                <li>
-                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators" target="_blank">
-                                        <h4>Assignment Operators</h4>
-                                    </a>
-                                </li>
-                                <script src="https://gist.github.com/goodbedford/8b9ebc25e2bf8cd2ba817260e685c027.js"></script>
-                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" target="_blank"><h4>Equality / Comparison Operators</h4></a></li>
+                              <li>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators" target="_blank">
+                                  <h4>Assignment Operators</h4>
+                                </a>
+                              </li>
+                              <script src="https://gist.github.com/goodbedford/8b9ebc25e2bf8cd2ba817260e685c027.js"></script>
+                              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" target="_blank"><h4>Equality / Comparison Operators</h4></a></li>
 
-                                <li>The triple equal and double equal evaluate to true or false</li>
-                                <script src="https://gist.github.com/goodbedford/dd934559b539ff6f1e8f971baeaf1fcb.js"></script>
+                              <li>The triple equal and double equal evaluate to true or false</li>
+                              <script src="https://gist.github.com/goodbedford/dd934559b539ff6f1e8f971baeaf1fcb.js"></script>
 
-                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Relational_operators" target="_blank"><h4>Relational/ Comparison Operators</h4></a></li>
-                                <script src="https://gist.github.com/goodbedford/ea51ca35aecbb6e0c1a69a45abe62baf.js"></script>
-                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators" target="_blank"><h4>Arithmetic Operators</h4></a></li>
-                                <script src="https://gist.github.com/goodbedford/7bffaabac36397129cd255aadb0e1bcc.js"></script>
+                              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Relational_operators" target="_blank"><h4>Relational/ Comparison Operators</h4></a></li>
+                              <script src="https://gist.github.com/goodbedford/ea51ca35aecbb6e0c1a69a45abe62baf.js"></script>
+                              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators" target="_blank"><h4>Arithmetic Operators</h4></a></li>
+                              <script src="https://gist.github.com/goodbedford/7bffaabac36397129cd255aadb0e1bcc.js"></script>
 
-                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence" target="_blank"><h4>Operator Precedence</h4></a></li>
-                                <li>The rules for the order in which values get evaluated</li>
-                                <script src="https://gist.github.com/goodbedford/d47117b8c83edbc3d396a798b8a21c63.js"></script>
+                              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence" target="_blank"><h4>Operator Precedence</h4></a></li>
+                              <li>The rules for the order in which values get evaluated</li>
+                              <script src="https://gist.github.com/goodbedford/d47117b8c83edbc3d396a798b8a21c63.js"></script>
                             </ul>
+                          </div>
                         </div>
-                        <div id="bm-js-control-flow" class="info-panel">
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div id="bm-js-control-flow" class="info-panel">
                             <h3>Control Flow</h3>
+                            <div class="row">
+                              <div class="col-sm-4">
+                                <p>Conditional statements are sets of commands that executes if the condition is true or false</p>
+                                <ul>
+                                  <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement" target="_blank">if/else</a></strong></li>
+                                  <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement" target="_blank">if/else/if</a></strong></li>
+                                  <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while" target="_blank">while</a></strong></li>
+                                  <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch" target="_blank">switch</a></strong></li>
+                                </ul>
+                              </div>
+                              <div class="col-sm-8">
+                                <iframe src="//giphy.com/embed/14jSepsjFYtktO" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/course-obstacle-14jSepsjFYtktO">via GIPHY</a></p>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <script src="https://gist.github.com/goodbedford/d7d9da694737101a5daa98f267dbb6dd.js"></script>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div id="bm-js-loops" class="info-panel">
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div id="bm-js-loops" class="info-panel">
                             <h3>Loops & Interators</h3>
+                            <p>Loops are used to circulate through list or list-like objects</p>
+                            <h4><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for" target="_blank">for</a></h4>
+                            <script src="https://gist.github.com/goodbedford/fe72f65c579e5c13da6c551ce107020b.js"></script>
+                            <h4><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank">forEach</a></h4>
+                            <script src="https://gist.github.com/goodbedford/64945a4f55babd7e0fc867c667ce6a12.js"></script>
+                            <h4><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank">Map</a></h4>
+                            <script src="https://gist.github.com/goodbedford/0070be4ba069dc58595e710c64d0bfff.js"></script>
+                          </div>
                         </div>
-                        <div id="bm-js-bootstrap" class="info-panel">
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div id="bm-js-bootstrap" class="info-panel">
                             <h3>Bootstrap</h3>
+                            <p><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>
+                              Is a responsive, mobile first css framework
+                            </p>
+                            <script src="https://gist.github.com/goodbedford/5876bb8a1f44969c665a20eaf7be8e4c.js"></script>
+                          </div>
                         </div>
-                        <div id="bm-js-dom" class="info-panel">
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div id="bm-js-dom" class="info-panel">
                             <h3>DOM Events</h3>
+                            <p>The Document Object Model is the interface between HTML and Javascript.</p>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank">DOM Intro</a>
+                            <div>
+                              <img src="images/screenshots/html-dom.jpg" alt="dom image">
+                            </div>
+                            <h4>Selectors</h4>
+                            <ul>
+                              <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" target="_blank">document.getElementById</a></li>
+                              <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll" target="_blank">querySelectorAll</a></li>
+                            </ul>
+                            <script src="https://gist.github.com/goodbedford/f397eb252a74c4bb140628fde41954d7.js"></script>
+                          </div>
                         </div>
-                        <div id="bm-js-jquery" class="info-panel">
-                            <h3>Jquery</h3>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div id="bm-js-jquery" class="info-panel">
+                            <h3>Jquery: Yeah!!</h3>
+                            <p>A great library for making sense of the webs inconsistency.</p>
+                            <a href="https://jquery.com/" target="_blank">Jquery</a>
+                          </div>
                         </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div>
+                            <p data-height="400" data-theme-id="0" data-slug-hash="yOoEEG" data-default-tab="result" data-user="goodbedford" class="codepen">See the Pen <a href="https://codepen.io/goodbedford/pen/yOoEEG/">Add a simple listener</a> by goodbedford (<a href="http://codepen.io/goodbedford">@goodbedford</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                            <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                          </div>
+                          <div>
+                            <p data-height="500" data-theme-id="0" data-slug-hash="PNJJQp" data-default-tab="result" data-user="goodbedford" class="codepen">See the Pen <a href="http://codepen.io/goodbedford/pen/PNJJQp/">Click Game 2</a> by goodbedford (<a href="http://codepen.io/goodbedford">@goodbedford</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                            <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                          </div>
+                          <div>
+                            <p data-height="500" data-theme-id="0" data-slug-hash="WwZZzd" data-default-tab="result" data-user="goodbedford" class="codepen">See the Pen <a href="http://codepen.io/goodbedford/pen/WwZZzd/">Click Game 3 timed</a> by goodbedford (<a href="http://codepen.io/goodbedford">@goodbedford</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                            <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                          </div>
+                        </div>
+                      </div>
 
-                        <!-- resources -->
-                        <div id="bm-js-resources" class="info-panel">
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <!-- resources -->
+                          <div id="bm-js-resources" class="info-panel">
                             <h3>Style Guides & Other Resources</h3>
                             <ul class="list-unstyled">
-                                <li>Style Guides</li>
-                                <li><a href="https://github.com/airbnb/javascript/tree/master/es5" target="_blank">AirBnB Javascript Style Guide Reference</a></li>
-                                <li><a href="https://github.com/airbnb/css" target="_blank">AirBnB CSS Style Guide References</a></li>
-                                <li>Books</li>
-                                <li><a href="https://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/">If Hemingway wrote Javascript</a></li>
-                                <li><a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md">You Don't Know JS</a></li>
+                              <li>Style Guides</li>
+                              <li><a href="https://github.com/airbnb/javascript/tree/master/es5" target="_blank">AirBnB Javascript Style Guide Reference</a></li>
+                              <li><a href="https://github.com/airbnb/css" target="_blank">AirBnB CSS Style Guide References</a></li>
+                              <li>Books</li>
+                              <li><a href="https://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/">If Hemingway wrote Javascript</a></li>
+                              <li><a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md">You Don't Know JS</a></li>
                             </ul>
-
+                          </div>
                         </div>
-                        <p data-height="268" data-theme-id="0" data-slug-hash="yOoEEG" data-default-tab="result" data-user="goodbedford" class="codepen">See the Pen <a href="https://codepen.io/goodbedford/pen/yOoEEG/">Add a simple listener</a> by goodbedford (<a href="http://codepen.io/goodbedford">@goodbedford</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-                        <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-                        <!-- logo footer -->
-                        <div class="page-footer info-panel">
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <!-- logo footer -->
+                          <div class="page-footer info-panel">
                             <h3 class="">Special Thanks To:</h3>
                             <ul class="list-unstyled">
-                                <li><a href="">General Assembly</a></li>
-                                <li><a href="">Code Pen</a></li>
-                                <li><a href="">MDN</a></li>
-                                <li><a href="">Jquery</a></li>
-                                <li><a href="">GitHub</a></li>
+                              <li><a href="">General Assembly</a></li>
+                              <li><a href="">Code Pen</a></li>
+                              <li><a href="">MDN</a></li>
+                              <li><a href="">Jquery</a></li>
+                              <li><a href="">GitHub</a></li>
                             </ul>
+                          </div>
                         </div>
+                      </div>
                     </div>
-
                 </div> <!-- end of main row -->
 
             </div>

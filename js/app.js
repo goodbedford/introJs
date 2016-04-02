@@ -4,7 +4,7 @@
 
     active();
     function active() {
-        //addBorderStyle();
+        addBorderStyle();
         addMenuHandler();
         addQuizHandeler();
     }
@@ -22,8 +22,11 @@
             if (index % 2 === 0){
                 //even
                 $panel.addClass("info-panel-border-even");
+                $panel.find("h3").addClass("info-panel-header-even");
             } else {
                 $panel.addClass("info-panel-border-odd");
+                $panel.find("h3").addClass("info-panel-header-odd");
+
             }
             return this;
         }

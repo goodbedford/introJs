@@ -69,26 +69,45 @@ code.language-javascript {
 /* --------------------------------------*/
 /* info panel ------------------------*/
 
-.info-panel {
+div.info-panel {
     min-height: 500px;
     padding: 5em 1em 1em 1em;
 }
-.info-panel:nth-of-type(odd) {
+/*div.info-panel:nth-of-type(odd) {*/
+    /*border-left: 5px solid #F5A503; !* orange *!*/
+/*}*/
+
+
+/*div.info-panel:nth-of-type(even) {*/
+    /*border-left: 5px solid #F2385A; !* strawberry *!*/
+/*}*/
+
+.info-panel-border-even {
     border-left: 5px solid #F5A503; /* orange */
 }
-.info-panel:nth-of-type(even) {
+.info-panel-border-odd {
     border-left: 5px solid #F2385A; /* strawberry */
 }
-.info-panel:nth-of-type(odd) > h3 {
+.info-panel-header-even {
     color: white;
     background-color: #F5A503; /* orange */
     padding: 5px;
 }
-.info-panel:nth-of-type(even)> h3 {
+.info-panel-header-odd {
     color: white;
     background-color: #F2385A; /* strawberry */
     padding: 5px;
 }
+/*.info-panel:nth-of-type(odd) > h3 {*/
+    /*color: white;*/
+    /*background-color: #F5A503; !* orange *!*/
+    /*padding: 5px;*/
+/*}*/
+/*.info-panel:nth-of-type(even)> h3 {*/
+    /*color: white;*/
+    /*background-color: #F2385A; !* strawberry *!*/
+    /*padding: 5px;*/
+/*}*/
 
 
 /* --------------------------------------*/
