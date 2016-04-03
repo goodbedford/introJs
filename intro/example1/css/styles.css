@@ -1,0 +1,24 @@
+
+.track {
+  min-height: 50px;
+  min-width: 400px;
+  background-color: yellow;
+  overflow: hidden;
+}
+
+#bar1 {
+
+  min-height: 50px;
+  width: 10px;
+  background-color: red;
+}
+#bar2 {
+  min-height: 50px;
+  width: 10px;
+  background-color: purple;
+}
+
+.btn-panel {
+  margin-top: 3em;
+
+}
