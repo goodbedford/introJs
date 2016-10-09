@@ -35,7 +35,7 @@
  | 5	| Guided Practice |	Bootstrap |
  | 5	| Introduction |	Document Object Model |
  | 5	| Introduction |	DOM Selectors |
- | 10	Guided Practice |	DOM Selectors |
+ | 10 |	Guided Practice |	DOM Selectors |
  | 5	| Introduction |	Party Town |
  | 5	| Guided Practice |	Party Town |
  | 10	| Independent Practice |	Party Town |
