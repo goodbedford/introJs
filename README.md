@@ -4,7 +4,7 @@
 
 
  | Timing | Type | Topic |
- | ------- | ---- | ----- |
+ | ------ | ---- | ----- |
  | 10   | Introduction | Student Introduction |
  | 10	| Introduction| 	Student Introduction|
  | 10	| Introduction| 	Dev Environment Setup|
@@ -16,9 +16,9 @@
  | 10	| Guided Practice| 	Console.log|
  | 10	| Demo| 	JS Syntax|
  | 5	| Independent Practice|	Pop Quiz|
- | 10	| Break| 	Break|
- | 5	| Introduction| 	Primitives|
- | 5	| Guided Practice| 	Primitives|
+ | 10	| Break| 	Break| 
+ | 5	| Introduction| 	Primitives |
+ | 5	| Guided Practice| 	Primitives |
  | 15	| Independent Practice Quiz | 	Primitives |
  | 15	| Guided Practice | 	Data Types |
  | 15	| Independent Practice Quiz | 	Data Types |
