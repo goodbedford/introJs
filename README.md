@@ -6,7 +6,6 @@ _____
 
  Timing | Type | Topic
  ------ | ---- | -----
-10   | Introduction | Student Introduction
 10	| Introduction| 	Student Introduction
 10	| Introduction| 	Dev Environment Setup
 10	| Introduction| 	Javascript History
