@@ -1,7 +1,8 @@
 ## Intro JS##
 ### April 2016###
- http://goodbedford.github.io/introJs
 
+ http://goodbedford.github.io/introJs
+_____
 
  | Timing | Type | Topic |
  | ------ | ---- | ----- |
@@ -16,7 +17,7 @@
  | 10	| Guided Practice| 	Console.log|
  | 10	| Demo| 	JS Syntax|
  | 5	| Independent Practice|	Pop Quiz|
- | 10	| Break| 	Break| 
+ | 10	| Break| 	Break|
  | 5	| Introduction| 	Primitives |
  | 5	| Guided Practice| 	Primitives |
  | 15	| Independent Practice Quiz | 	Primitives |
