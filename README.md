@@ -1,7 +1,8 @@
 ## Intro JS 2016 ##
 ----
- ### Companion Site: http://goodbedford.github.io/introJs ###
-#### Table of Contents ####
+ ### Companion Site: http://goodbedford.github.io/introJs
+
+#### Table of Contents
  Timing | Type | Topic
  ------ | ---- | -----
 10	| Introduction| 	Student Introduction
