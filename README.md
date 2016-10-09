@@ -4,9 +4,10 @@
  http://goodbedford.github.io/introJs
 _____
 
- | Timing | Type | Topic |
- | ------ | ---- | ----- |
- | 10   | Introduction | Student Introduction |
+ Timing | Type | Topic
+ ------ | ---- | -----
+ 10   | Introduction | Student Introduction
+ 
  | 10	| Introduction| 	Student Introduction|
  | 10	| Introduction| 	Dev Environment Setup|
  | 10	| Introduction| 	Javascript History|
