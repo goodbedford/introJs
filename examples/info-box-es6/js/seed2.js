@@ -120,41 +120,36 @@ let questionsFavorites = [
   },
 ]
 
-let $page = document.querySelector("#page");
+let page = document.querySelector("#page");
 
 
 activate();
 function activate() {
-  addQuestions(questionsFavorites, $page);
+  addQuestions(questions, page);
 }
 
 function addQuestions(questions, target) {
   let infoBox = document.createElement("div");
-  infoBox.classList.add("info-box", "info-box--md")
+  infoBox.classList.add("info-box", "info-box--md");
+
   questions.forEach( function(question, index) {
     let infoBoxSection = document.createElement("div");
     infoBoxSection.classList.add("info-box__section");
-    infoBoxSection.innerHTML=makeInfoBox(question, index);
+    infoBoxSection.innerHTML = makeInfoBox(question, index);
     infoBox.appendChild(infoBoxSection);
   });
-  target.append(infoBox);
+  target.appendChild(infoBox);
 };
 function makeInfoBox(item, index) {
-  let infoBox = [
-        "<header class=\"info-box__header\">" + (index + 1) + ":" + item.question + "</header>",
-        "<div class=\"info-box__section info-box__section--content\">"
-  ]
-  let answers = item.answers.map( item => {
-    return [
-      "<p class=\"info-box__section info-box__section--body\">",
-        "<span class=\"info-box__text info-box__text--sm info-box__text--bg\">" + item.catergory + "::</span>",
-        "" + item.answer,
-      "</p>"
-    ].join("");
-  });
-  infoBox = infoBox.concat(answers);
-
-  infoBox.push("</div>")
-
-  return infoBox.join("");
+  let infoBox = `
+        <header class="info-box__header"> ${index + 1} : ${item.question}</header>
+          <div class="info-box__section info-box__section--content">
+        ${item.answers.map( item => `
+          <p class="info-box__section info-box__section--body">
+              <span class="info-box__text info-box__text--sm info-box__text--bg"> ${item.catergory}::</span>
+             ${item.answer}
+          </p>`)
+          .join("")}
+          </div>`;
+  return infoBox;
 }
