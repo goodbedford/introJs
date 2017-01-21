@@ -1,0 +1,118 @@
+/*
+  base styles
+*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+/*
+  html elements
+*/
+body {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 62.5%;
+}
+/*
+  utility style
+*/
+.me {
+  border: 1px solid red;
+}
+/*
+  game component
+*/
+.game {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.game__board {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  width: 300px;
+}
+.game__block {
+  align-items: center;
+  border: 5px solid black;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  transition: 0.3s all;
+  width: 100px;
+}
+.game__block--bg-fail {
+  background-color: tomato;
+}
+
+.game__block--bg-success {
+  background-color: lime;
+  transform: rotate(4deg);
+}
+.game__block--lg-text {
+  font-size: 3.6em;
+}
+.game__button {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 4px;
+  color: black;
+  cursor: pointer;
+  display: block;
+  font-size: 2.4em;
+  padding: 8px 12px;
+  transtion: 0.3s all;
+}
+.game__button:hover {
+  background-color: lime;
+  color: green;
+}
+.game__msg {
+  border: 5px solid black;
+  color: black;
+  font-size: 3.2em;
+  padding: 8px 12px;
+  animation: slide-down-ani 1s ease-in forwards;
+  transform: translate(0,-100%);
+}
+@keyframes slide-down-ani {
+  100% {
+    transform: translate(0,0%);
+  }
+}
+.game__msg--fail {
+  background-color: tomato;
+}
+.game__msg--success {
+  background-color: lime;
+}
+.game__msg--target {
+  margin: 20px;
+  min-height: 6.5em;
+  overflow: hidden;
+}
+.game__text {
+  color: black;
+  text-shadow: 0 2px 2px gray;
+}
+.game__text--center {
+  text-align: center;
+}
+.game__text--fail {
+  color: deeppink;
+ }
+.game__text--lg {
+   font-size: 4.8em;
+}
+.game__text--primary {
+  color: rgb(175, 50, 175);
+}
+.game__text--success {
+  color: lime;
+}

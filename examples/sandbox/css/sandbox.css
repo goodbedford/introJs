@@ -1,0 +1,56 @@
+/*
+  base
+*/
+*, *:before, *:after { box-sizing: border-box;}
+body {
+  font-size: 62.5%;
+}
+li {
+  font-size: 2.2em;
+}
+
+/*
+  nav
+*/
+.nav {}
+.nav__button {
+  border: 2px solid #2E4559;
+  color: #2E4559;
+  cursor: pointer;
+  padding: 6px 12px;
+  transiton: 0.3s all cubic-bezier(.17,.67,.83,.67);
+  text-decoration: none;
+}
+.nav--absolute {
+  position: absolute;
+}
+.nav__button--default {
+  background-color: #1ABB9C;
+  border-radius: 4px;
+}
+.nav__button--default:hover {
+  background-color: #F2F2F2;
+}
+.nav__button--md {
+  font-size: 2.8em;
+}
+.nav__button--sm {
+  font-size: 1.8em;
+}
+
+/*
+  sandbox
+*/
+.sb {
+
+}
+.sb__bg {
+  background: linearGradient(#B4C1CC, #F2F2F2);
+}
+.sb__text {
+  font-size: 1.6em;
+}
+.sb__text--center { text-align: center;}
+.sb__text--lg { font-size: 4.8em;}
+.sb__text--xxl { font-size: 16.4em;}
+.sb__text--xxxl { font-size: 20.4em;}

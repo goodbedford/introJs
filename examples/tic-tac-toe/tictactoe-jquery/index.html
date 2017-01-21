@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tic Tac Toe Jquery</title>
+  <!-- order matters here custom css on below third party  -->
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="game">
+    <span class="game__text game__text--drop-shadow game__text--lg">Tic Tac Toe</span>
+    <h1 class="game__text game__text--color-slate">Jquery Edition</h1>
+    <button id="new-game-button" class="game__button">New Game</button>
+    <div id="msg-target" class="game__msg--target"></div>
+    <div id="gameboard-target" class="game__board">
+      <div class="game__block game__block--lg-text" data-block="0"></div>
+      <div class="game__block game__block--lg-text" data-block="1"></div>
+      <div class="game__block game__block--lg-text" data-block="2"></div>
+      <div class="game__block game__block--lg-text" data-block="3"></div>
+      <div class="game__block game__block--lg-text" data-block="4"></div>
+      <div class="game__block game__block--lg-text" data-block="5"></div>
+      <div class="game__block game__block--lg-text" data-block="6"></div>
+      <div class="game__block game__block--lg-text" data-block="7"></div>
+      <div class="game__block game__block--lg-text" data-block="8"></div>
+    </div>
+  </div>
+  <!-- always put your jquery above your custom code -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script> -->
+
+  <script src="js/app.js"></script>
+  <!-- <script src="js/bonusAnswer.js"></script> -->
+  <!-- always put your scripts above the closing </body> tag  -->
+</body>
+</html>
