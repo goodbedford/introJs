@@ -8,7 +8,10 @@ body {
 li {
   font-size: 2.2em;
 }
-
+code {
+	background-color: yellow;
+	padding:10px;
+}
 /*
   nav
 */
